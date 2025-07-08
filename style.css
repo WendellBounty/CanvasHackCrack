@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.bar {
+    position: fixed;
+    height: 2.75vw;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    background-color: #e4e4e4;
+    border-bottom: 1px solid #b6b6b6;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    padding-left: .8vw;
+    gap: 1.1vw;
+    user-select: none;
+}
+
+.bar p {
+    font-size: 1vw;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    margin-left: .2vw;
+    z-index: 999999999999999999;
+}
+
+.home {
+    height: 1vw;
+    width: .8vw;
+}
+
+.reload {
+    height: 1vw;
+    width: 1.1vw;
+}
+
+.incorrect-answer {
+    color: red;
+}
+
+.correct-answer {
+    color: green;
+}

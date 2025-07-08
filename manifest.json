@@ -1,0 +1,55 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 3,
+    "name": "Canvas Hack",
+    "description": "Cheat on quizzes easily, and maintain a low-profile on all Canvas tests.",
+    "version": "1.6.7",
+    "permissions": ["activeTab", "scripting", "storage"],
+    "icons": {
+        "16": "icons/ch.png",
+        "48": "icons/ch.png",
+        "128": "icons/ch.png"
+    },
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "icons/icon.png",
+            "48": "icons/icon.png",
+            "128": "icons/icon128.png"
+        }
+    },
+    "host_permissions": [
+        "*://*/*"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["content.js"],
+            "run_at": "document_start",
+            "all_frames": true
+        },
+        {
+            "matches": [
+                "*://*.instructure.com/courses/*/quizzes/*/take*",
+                "*://*.edu/courses/*/quizzes/*/take*",
+                "*://*.org/courses/*/quizzes/*/take*"
+            ],
+            "js": ["quizanswers.js"],
+            "run_at": "document_start",
+            "all_frames": true
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "bar.html", "style.css", "icons/home.png", "icons/reload.png", "quizanswers.js", "content.js", "inject.js"
+            ],
+            "matches": ["<all_urls>"],
+            "use_dynamic_url": true
+        }
+    ]
+}

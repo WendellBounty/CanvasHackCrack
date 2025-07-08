@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Canvas Hack</title>
+        <link rel="stylesheet" href="popup.css">
+        <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.2.0/css/all.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="top">
+            <div class="top-icon left" id="updates_icon">
+                <i id="important_alert_icon" class="fa-solid fa-circle-exclamation" style="display: none;"></i>
+                <i class="fa-solid fa-bell icon">
+                    <span>Updates</span>
+                </i>
+            </div>            
+            <a href="https://canvashack.com/" target="_blank" class="canvashack-web-link"><img src="./images/canvashack-main.png" class="logo-img" draggable="false"></a>
+            <div class="top-icon" id="settings_icon">
+                <i class="fa-solid fa-gear icon">
+                    <span>Settings</span>
+                </i>
+            </div>
+        </div>
+        <div class="page one" id="p1">
+            <p class="current-status">Current Status: <strong><span style='color:#52d11c;'>Activated!</span></strong></p>
+            
+            <h2 id="preDesc">Pre-Activated Features:</h2>
+            <h3>1. <span>Save Feature:</span> Auto saves correct answers in quizzes with multiple attempts.</h3>
+            <h3>2. <span>Privacy Mode:</span> Auto prevents detection of tab-switching during Canvas quizzes.</h3>
+            <button id="toggleButton" class="kiosk paid">Canvas Kiosk Bar</button>
+            <h4 class="paid" id="status"><span>Tab-Switching Request Blocker: <b id="statusReader">ACTIVATED</b></span><br><span><span class="ch">[CH]</span> Full Testing Security: <b id="statusReader">ACTIVATED</b> </h4>
+        </div>
+        <div class="page two" id="p2" style="display:none;">
+            <div class="page-type" id="settings_back">
+                <i class="fa-solid fa-arrow-left"></i>
+                <h6>Settings</h6>
+            </div>
+                <div class="url-blocker">
+                    <h5>Block URLs from Injection:</h5>
+                    <div id="urlContainer"></div>
+                    <input type="text" id="urlInput" placeholder="Enter URLs separated by commas (applied automatically)">
+                    <button id="saveUrls">Save URLs</button>
+                </div>    
+                <div class="feature-toggle">
+                    <h5>Save Correct Answers on Multiple Attempts:</h5>
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="saveAnswersCheckbox" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="get-help">
+                    <p>If you ever have any questions & or issues join the discord server and we'll help you out! <a href="https://discord.gg/CtpHA6XC2u" target="_blank">https://discord.gg/CtpHA6XC2u</a></p>
+                </div>    
+        </div>
+        
+        <div class="page seven" id="p7" style="display:none;">
+            <div class="page-type" id="updates_back">
+                <i class="fa-solid fa-arrow-left"></i>
+                <h6>Updates & Announcements</h6>
+            </div>
+            <div id="updates_content"></div>
+        </div>
+        
+        <!-- Tutorial is not payment related, so it can stay -->
+        <div id="step-container" style="display: none;"> <!-- Hide by default, let JS handle it -->
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 0%;"></div>
+            </div>
+                <div class="step-content">
+                    <div class="step step-1 active">
+                        <div class="content-step step-1">
+                            <h2 class="header">Turn <span>invisible</span> during any Canvas test</h2>
+                            <p class="desciptor">Start testing completely worry free, finish quizzes easily, and maintain a undetectable low-profile on all Canvas tests.</p>
+                            <ul class="ul-list">
+                                <li class="li-list"><i class="fa-solid fa-check"></i>Prevent detection of <b>tab-switching</b></li>
+                                <li class="li-list"><i class="fa-solid fa-check"></i>Turn <b>invisible</b> during all tests</li>
+                                <li class="li-list"><i class="fa-solid fa-check"></i>Save <b>correct answers</b> in quizzes</li>
+                                <li class="li-list"><i class="fa-solid fa-check"></i>Works with <b>all</b> Canvas platforms</li>
+                                <li class="li-list"><i class="fa-solid fa-check"></i>100% Always Working <b>Guarantee</b></li>
+                            </ul>
+                            <ul class="ul-list special">
+                                <li class="li-list"><i class="fa-solid fa-user"></i><span>2,000+</span> Happy CanvasHack Users!</li>
+                            </ul>
+                        </div>
+                        <div class="bot-but-con">
+                            <button class="next-btn">Learn how it works<i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+    
+                    <div class="step step-2">
+                        <div class="content-step step-2">
+                            <h2 class="header">Interception and Redirection</h2>
+                            <ul class="ul-list">
+                                <li class="li-list"><i class="fa-solid fa-check"></i>Invisible Tab Switching</li>
+                                <li class="li-list"><i class="fa-solid fa-check"></i>Cheat undetected during tests</li>
+                            </ul>
+                            <div class="image">
+                                <img src="./images/action-log-2.png" class="image-one" alt="" />
+                            </div>
+                        </div>
+                        <div class="bot-but-con">
+                            <button class="next-btn">Got it!<i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+    
+                    <div class="step step-3">
+                        <div class="content-step step-3">
+                            <h2 class="header">Go Fully Invisible</h2>
+                            <div class="image">
+                                <img src="./images/fake-code.png" class="image-two" alt="" />
+                            </div>
+                            <ul class="ul-list">
+                                <li class="li-list"><i class="fa-solid fa-check"></i>Prevents Canvas tracking</li>
+                                <li class="li-list"><i class="fa-solid fa-check"></i>Keeps you marked as "on task"</li>
+                                <li class="li-list"><i class="fa-solid fa-check"></i>Hides all off-test actions</li>
+                            </ul>
+                        </div>
+                        <div class="bot-but-con">
+                            <button class="next-btn">Next!<i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="step step-4">
+                        <div class="content-step step-4">
+                            <h1 class="header">What <span>REAL</span> students say:</h1>
+                            <div class="review-column">
+                                <div class="review">
+                                    <div class="top-review">
+                                        <div class="review-data">
+                                            <img src="./images/icons/user/juankanor5561.jpg" class="review-icon" alt="Juan Kanor">
+                                            <div class="person-data">
+                                                <h2>Juan Kanor</h2>
+                                                <p>Student</p>
+                                            </div>
+                                            <div class="stars">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="review-paragraph">"My brother used the CanvasHack and not only did he go undetected, he confirmed with his own teacher (shes chill) and went through the canvas logs and it doesn't show any anything!"</p>
+                                </div>
+                                <div class="review">
+                                  <div class="top-review">
+                                    <div class="review-data">
+                                        <img src="./images/icons/user/sean.jpg" class="review-icon" alt="Sean">
+                                        <div class="person-data">
+                                            <h2>Sean Blane</h2>
+                                            <p>Student</p>
+                                        </div>
+                                        <div class="stars">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </div>
+                                    </div>
+                                  </div>
+                                  <p class="review-paragraph">"Works so good, and the owner helps out so much and shows you how it works. 10/10. will pass all of my test now bro!"</p>
+                                </div>
+                                <div class="review">
+                                    <div class="top-review">
+                                        <div class="review-data">
+                                            <img src="./images/icons/user/finn.webp" class="review-icon" alt="Finnnn2k">
+                                            <div class="person-data">
+                                                <h2>Finnn2k</h2>
+                                                <p>Student</p>
+                                            </div>
+                                            <div class="stars">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="review-paragraph">"I just took the 2 tests on Thursday. No problem at all. Teacher graded my test without any questions. It's legit."</p>
+                                </div>
+                                <div class="review">
+                                    <div class="top-review">
+                                        <div class="review-data">
+                                            <img src="./images/icons/user/itscenturion.png" class="review-icon" alt="ItsCenturion">
+                                            <div class="person-data">
+                                                <h2>ItsCenturion</h2>
+                                                <p>Student</p>
+                                            </div>
+                                            <div class="stars">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="review-paragraph">"Ive been using the canvas hack for a few months now and its been working great! used it on a ton of tests since getting it and my teacher hasn't caught me cheating and switching tabs"</p>
+                                </div>
+                                <div class="review">
+                                    <div class="top-review">
+                                        <div class="review-data">
+                                            <img src="./images/icons/user/guechue.png" class="review-icon" alt="Gue Chue">
+                                            <div class="person-data">
+                                                <h2>Gue Chue</h2>
+                                                <p>Student</p>
+                                            </div>
+                                            <div class="stars">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="review-paragraph">"WORKS SO WELL, my mothers a teacher and she uses canvas, I asked her to take a practice "test" in her canvas class before school started and i cheated on it by leaving tabs & windows and doing other stuff and i asked her to check the quiz log after and it said NOTHINGGGG, canvas said I was on the test being a perfect student basically, definitely recommend it if your worried about school this year"</p>
+                                </div>
+                                <div class="review">
+                                    <div class="top-review">
+                                        <div class="review-data">
+                                            <img src="./images/icons/user/reiko100.jpg" class="review-icon" alt="reiko100">
+                                            <div class="person-data">
+                                                <h2>Reiko100</h2>
+                                                <p>Student</p>
+                                            </div>
+                                            <div class="stars">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="review-paragraph">"I can confirm that this works! The teacher account cant see anything."</p>
+                                </div>
+                                <div class="review">
+                                    <div class="top-review">
+                                        <div class="review-data">
+                                            <img src="./images/icons/user/specter.webp" class="review-icon" alt="specter">
+                                            <div class="person-data">
+                                                <h2>Specter</h2>
+                                                <p>Student</p>
+                                            </div>
+                                            <div class="stars">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="review-paragraph">"This is perfect, it saved my a** on a test last thursday morning. i have NO idea what I would've done without this. such a lifesaver"</p>
+                                </div>
+                                <div class="review">
+                                    <div class="top-review">
+                                        <div class="review-data">
+                                            <img src="./images/icons/user/buker.webp" class="review-icon" alt="buker">
+                                            <div class="person-data">
+                                                <h2>Buker</h2>
+                                                <p>Student</p>
+                                            </div>
+                                            <div class="stars">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="review-paragraph">"the extension has been carrying me this semester on canvas"</p>
+                                </div>
+                        </div>
+                            <p class="step-4-text">Join 2k+ Happy Users!</p>
+                        </div>
+                        <i class="fa-regular fa-arrow-down down-review-arrow" id="down-arrow"></i>
+                        <div class="bot-but-con">
+                            <button id="finish-btn" class="next-btn">Get started!<i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <script src="popup.js"></script>
+    </body>
+</html>
